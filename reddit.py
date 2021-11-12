@@ -9,11 +9,6 @@ class Reddit():
     def __init__(self, coin):
         self.coin = coin
 
-
-    def hallo(self):
-        print("hallo")
-
-
     def getData(self):
         with urllib.request.urlopen("https://api.pushshift.io/reddit/search/submission/?q=" + self.coin) as url:
             data = json.loads(url.read().decode())
